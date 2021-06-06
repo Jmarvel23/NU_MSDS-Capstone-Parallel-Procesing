@@ -8,7 +8,7 @@ This project highlights how to use the multiprocessing Python package to parelle
 The importance for quick processing time only increases as the problems we are solving become more complex and as such require more data to be analyzed per time step. Parallel processing is one of the major keys when aiming to improve processing time. To put numbers in perspective, our example project boasted a 22% decrease in processing time when using parallel processing vs. normal processing. This processing time improvement, of course, will increase as the number of cores to parallelize across increases.
 
 # Code Highlited Below
-## Define Model
+## Define, Train, and Save Model
 
 ``` Python
 def mnistModel(X_train, X_test, Y_train, Y_test):
@@ -54,7 +54,7 @@ def mnistModel(X_train, X_test, Y_train, Y_test):
     model1.save('mnist_model')
 ```
 
-## Define Parallel Prediction
+## Define Parallel Prediction Function
 
 ``` Python
 def parallelPredict(data):
@@ -79,7 +79,7 @@ def parallelize(df, fn):
     return results
 ```
 
-## Call Functions to Run Our Example
+## Call Functions to Run Our Example 
 
 ``` Python
 if __name__ == "__main__":
